@@ -12,7 +12,7 @@ interface Message {
   isGPT: boolean;
 }
 
-const OrthographyPage = () => {
+const ChatTemplate = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [messages, setMessages] = useState<Message[]>([]);
 
@@ -58,4 +58,4 @@ const OrthographyPage = () => {
   );
 };
 
-export default OrthographyPage;
+export default ChatTemplate;
