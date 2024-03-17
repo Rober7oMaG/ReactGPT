@@ -25,6 +25,7 @@ export const TextSelectMessageBox = ({
     event.preventDefault();
 
     if (message.trim() === '') return;
+    if (selectedOption === '') return;
 
     onSendMessage(message, selectedOption);
     setMessage('');
@@ -56,7 +57,9 @@ export const TextSelectMessageBox = ({
             value={selectedOption}
             onChange={(event) => setSelectedOption(event.target.value)}
           >
-            <option value="">Select an option</option>
+            <option value="" disabled>
+              -- Select an option --
+            </option>
             {options.map(({ id, text }) => (
               <option key={id} value={id}>
                 {text}
