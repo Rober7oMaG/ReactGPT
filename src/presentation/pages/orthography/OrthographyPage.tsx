@@ -49,8 +49,6 @@ const OrthographyPage = () => {
     ]);
 
     setIsLoading(false);
-
-    // Add message from GPT
   };
 
   return (

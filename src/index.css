@@ -21,13 +21,12 @@ ul {
 }
 
 strong {
-  @apply font-bold text-indigo-400;
+  @apply font-bold text-indigo-400 text-xl;
 }
 
 em {
   @apply italic text-pink-500;
 }
-
 
 .btn-primary {
   @apply bg-indigo-500 text-white font-bold py-2 px-4 rounded-xl hover:bg-indigo-700 transition-all duration-200 ease-in-out;

@@ -16,9 +16,9 @@ const ChatTemplate = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [messages, setMessages] = useState<Message[]>([]);
 
-  const handleSendMessage = async (message: string) => {
+  const handleSendMessage = async (text: string) => {
     setIsLoading(true);
-    setMessages((prev) => [...prev, { text: message, isGPT: false }]);
+    setMessages((prev) => [...prev, { text, isGPT: false }]);
 
     // TODO: Use case
     setIsLoading(false);
