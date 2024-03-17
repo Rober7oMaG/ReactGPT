@@ -6,8 +6,8 @@ import {
   MyMessage,
   TextMessageBox,
   TypingLoader,
+  GPTOrthographyMessage,
 } from '@presentation/components';
-import { GPTOrthographyMessage } from '@presentation/components/chat-bubbles';
 
 interface Message {
   text: string;
