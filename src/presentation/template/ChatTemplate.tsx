@@ -33,11 +33,11 @@ const ChatTemplate = () => {
           {/* Welcome */}
           <GPTMessage text="Hello! You can write your text in English and I'll be happy to check the orthography" />
 
-          {messages.map((message, index) =>
-            message.isGPT ? (
+          {messages.map(({ isGPT, text }, index) =>
+            isGPT ? (
               <GPTMessage key={index} text="This is from OpenAI" />
             ) : (
-              <MyMessage key={index} text={message.text} />
+              <MyMessage key={index} text={text} />
             ),
           )}
 
