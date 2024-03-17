@@ -1,26 +1,22 @@
+import { isResponseOk } from '@helpers';
 import { OrthographyResponse } from '@interfaces';
+import { axiosClient } from '@services';
 
 export const orthographyUseCase = async (prompt: string) => {
   try {
-    const response = await fetch(
-      `${import.meta.env.VITE_GPT_API}/orthography-check`,
+    const { data, status } = await axiosClient.post<OrthographyResponse>(
+      '/orthography-check',
       {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          prompt,
-        }),
+        prompt,
       },
     );
 
-    if (!response.ok) throw new Error('Could not process orthography check');
+    const responseOk = isResponseOk(status);
 
-    const data: OrthographyResponse = await response.json();
+    if (!responseOk) throw new Error('Could not process orthography check');
 
     return {
-      ok: true,
+      ok: responseOk,
       ...data,
     };
   } catch (error) {

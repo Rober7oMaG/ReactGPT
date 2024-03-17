@@ -10,7 +10,6 @@ export const prosConsStreamUseCase = async (prompt: string) => {
         body: JSON.stringify({
           prompt,
         }),
-        // TODO: AbortSignal
       },
     );
 

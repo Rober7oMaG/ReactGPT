@@ -1,0 +1,1 @@
+export { isResponseOk } from './response';

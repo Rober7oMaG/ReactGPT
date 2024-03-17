@@ -1,24 +1,22 @@
+import { isResponseOk } from '@helpers';
 import { TranslateResponse } from '@interfaces';
+import { axiosClient } from '@services';
 
 export const translateUseCase = async (prompt: string, language: string) => {
   try {
-    const response = await fetch(`${import.meta.env.VITE_GPT_API}/translate`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+    const { data, status } = await axiosClient.post<TranslateResponse>(
+      '/translate',
+      {
         prompt,
         language,
-      }),
-    });
+      },
+    );
 
-    if (!response.ok) throw new Error('Could not process translation');
-
-    const data: TranslateResponse = await response.json();
+    const responseOk = isResponseOk(status);
+    if (!responseOk) throw new Error('Could not process translation');
 
     return {
-      ok: true,
+      ok: responseOk,
       ...data,
     };
   } catch (error) {
