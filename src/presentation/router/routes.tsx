@@ -47,6 +47,13 @@ export const menuRoutes = [
     component: <TextToAudioPage />,
   },
   {
+    to: '/audio-to-text',
+    icon: 'fa-solid fa-comment-dots',
+    title: 'Audio to text',
+    description: 'Convert audio to text',
+    component: <AudioToTextPage />,
+  },
+  {
     to: '/image-generation',
     icon: 'fa-solid fa-image',
     title: 'Images',
@@ -59,13 +66,6 @@ export const menuRoutes = [
     title: 'Edit image',
     description: 'Images continuous generation',
     component: <ImageTunningPage />,
-  },
-  {
-    to: '/audio-to-text',
-    icon: 'fa-solid fa-comment-dots',
-    title: 'Audio to text',
-    description: 'Convert audio to text',
-    component: <AudioToTextPage />,
   },
   {
     to: '/assistant',
