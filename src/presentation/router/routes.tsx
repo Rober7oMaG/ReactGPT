@@ -7,7 +7,7 @@ import {
   ImageGenerationPage,
   AudioToTextPage,
   AssistantPage,
-  ImageTunningPage,
+  ImageVariationPage,
 } from '@presentation/pages';
 
 export const menuRoutes = [
@@ -61,11 +61,11 @@ export const menuRoutes = [
     component: <ImageGenerationPage />,
   },
   {
-    to: '/image-tunning',
+    to: '/image-variation',
     icon: 'fa-solid fa-wand-magic',
     title: 'Edit image',
     description: 'Images continuous generation',
-    component: <ImageTunningPage />,
+    component: <ImageVariationPage />,
   },
   {
     to: '/assistant',

@@ -1,7 +1,7 @@
 export { default as AssistantPage } from './assistant/AssistantPage';
 export { default as AudioToTextPage } from './audio-to-text/AudioToTextPage';
 export { default as ImageGenerationPage } from './image-generation/ImageGenerationPage';
-export { default as ImageTunningPage } from './image-generation/ImageTunningPage';
+export { default as ImageVariationPage } from './image-generation/ImageVariationPage';
 export { default as OrthographyPage } from './orthography/OrthographyPage';
 export { default as ProsConsPage } from './pros-cons/ProsConsPage';
 export { default as ProsConsStreamPage } from './pros-cons-stream/ProsConsStreamPage';

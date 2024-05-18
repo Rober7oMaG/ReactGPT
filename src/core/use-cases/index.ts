@@ -6,3 +6,4 @@ export { translateUseCase } from './translate.use-case';
 export { textToAudioUseCase } from './text-to-audio.use-case';
 export { audioToTextUseCase } from './audio-to-text.use-case';
 export { imageGenerationUseCase } from './image-generation.use-case';
+export { imageVariationUseCase } from './image-variation.use-case';

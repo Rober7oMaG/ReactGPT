@@ -1,5 +1,10 @@
 export { SidebarMenuItem } from './sidebar';
-export { GPTMessage, MyMessage, GPTOrthographyMessage } from './chat-bubbles';
+export {
+  GPTMessage,
+  MyMessage,
+  GPTOrthographyMessage,
+  GPTMessageSelectableImage,
+} from './chat-bubbles';
 export { TypingLoader } from './loaders';
 export {
   TextMessageBox,
