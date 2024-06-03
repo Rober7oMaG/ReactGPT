@@ -19,7 +19,6 @@ export const imageVariationUseCase = async (
 
     return { url, alt };
   } catch (error) {
-    console.log(error);
     return null;
   }
 };
