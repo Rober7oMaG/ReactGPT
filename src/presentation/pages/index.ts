@@ -7,3 +7,4 @@ export { default as ProsConsPage } from './pros-cons/ProsConsPage';
 export { default as ProsConsStreamPage } from './pros-cons-stream/ProsConsStreamPage';
 export { default as TextToAudioPage } from './text-to-audio/TextToAudioPage';
 export { default as TranslatePage } from './translate/TranslatePage';
+export { default as ImageToTextPage } from './image-to-text/ImageToTextPage';

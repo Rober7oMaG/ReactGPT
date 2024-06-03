@@ -15,4 +15,6 @@ export {
   imageVariationUseCase,
 } from './image-generation';
 
+export { imageToTextUseCase } from './image-to-text.use-case';
+
 export { createThreadUseCase } from './assistant';

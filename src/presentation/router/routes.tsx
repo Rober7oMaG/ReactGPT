@@ -8,6 +8,7 @@ import {
   AudioToTextPage,
   AssistantPage,
   ImageVariationPage,
+  ImageToTextPage,
 } from '@presentation/pages';
 
 export const menuRoutes = [
@@ -66,6 +67,13 @@ export const menuRoutes = [
     title: 'Edit image',
     description: 'Images continuous generation',
     component: <ImageVariationPage />,
+  },
+  {
+    to: '/image-to-text',
+    icon: 'fa-solid fa-book-open',
+    title: 'Image to Text',
+    description: 'Get information from image',
+    component: <ImageToTextPage />,
   },
   {
     to: '/assistant',
